@@ -1,6 +1,15 @@
+import streamlit as st
 from google.cloud import bigquery
+from google.oauth2 import service_account
 
-client = bigquery.Client()
+credentials = service_account.Credentials.from_service_account_info(
+    st.secrets["gcp_service_account"]
+)
+
+client = bigquery.Client(
+    credentials=credentials,
+    project="hospital-160e7"
+)
 
 
 def predict_diabetes(age, bmi, bp, glucose):
