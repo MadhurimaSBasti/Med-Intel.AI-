@@ -5,3 +5,9 @@ db-dtypes
 google-auth
 google-auth-oauthlib
 google-auth-httplib2
+google-genai
+langchain
+faiss-cpu
+sentence-transformers
+langchain-community
+langchain-text-splitters
